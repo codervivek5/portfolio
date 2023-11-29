@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+*{
+    margin: 0px;
+    padding:0px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-image: url('../img/bg.jpeg'); 
+    background-size: cover; 
+    /* background-position: center;  */
+    background-repeat: no-repeat; 
+    
+}
+
+.navbar {
+    display: flex;
+    height: 5vw;
+    background-color: rgb(251, 248, 248);
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 300px 300px 300px 300px #3a3636;
+
+}
+
+.logo{
+    position:static;
+    margin:0px 0px;
+    height: 4vw;
+    width:10vw;
+    text-align: left;
+}
+
+
+/* Navbar Menu Styling */
+.navbar .menu  {
+    display: flex;
+    gap: 30px;
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+}
+
+/* Navbar Menu Item Styling */
+.menu  a {
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    font-weight: bold;
+}
+
+/* Navbar Menu Hover Styling */
+.menu  a:hover {
+    color: peru;
+    text-shadow: 2px 2px 3px rgb(211, 189, 189);
+    text-decoration: underline;
+    font-size: larger;
+
+}
+
+.container{
+    display: flex;
+    height: 100%;
+    width:80vw;
+    margin:6% 10%;
+    padding: 30px;
+    
+}
+
+.container .left{
+    width: 50%;
+}
+
+.container .left h1{
+    margin: 60px 20px 20px 20px;
+    padding: 10px 10px;
+    font-size: 45px;
+
+}
+
+.container .left p{
+    margin: 20px 20px;
+    padding: 10px 10px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.container .left .cv a{
+    text-decoration: none;
+}
+
+button{
+    margin-left:30px;
+   height:40px;
+   width: 200px;
+   border-radius: 50px;
+   background-color: #c1c1c1;
+   box-shadow: 20px 20px 60px rgba(100, 99, 99, 0.333),inset -20px -20px 60px white;
+   color: black;
+   font-size: larger;
+}
+
+button:hover{
+    text-shadow: 0 0 2em rgb(113, 51, 51);
+    color:white;
+    background-color: black;
+    border:2px solid black;
+}
+
+.container .left .tags A{
+   text-decoration: none;
+}
+
+.container .left .tags img{
+    margin: 9px 14px;
+    padding: 9px 10px;
+    height: 50px;
+    width: 50px;
+    justify-content: space-evenly;
+    border-radius: 2px;
+}
+
+
+
+.container .right{
+    width: 50%;
+    margin: 60px 30px;
+    padding: 20px 20px;
+}
+
+.container .right img{
+    height: 75%;
+    width: 65%;
+    border-radius: 50%;
+}
