@@ -1,43 +1,47 @@
 import { motion } from 'framer-motion'
 import { FaGithub, FaLinkedin, FaDownload, FaEnvelope, FaPhone } from 'react-icons/fa'
+import { TypeAnimation } from 'react-type-animation'
+import profileImg from '../assets/profile.png'
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center py-20 relative">
+    <section className="min-h-screen flex items-center py-12 relative">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-dark via-dark/50 to-dark/80 pointer-events-none" />
       
       <div className="relative z-10 w-full">
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 items-start">
           {/* Left Column - Text Content */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="space-y-8"
+            className="space-y-6"
           >
-            <div className="space-y-2">
+            <div className="space-y-1">
               <h2 className="text-lg sm:text-xl text-primary font-medium">Hello, I'm</h2>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold">
                 <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                   Vivek Kumar
                 </span>
               </h1>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-300">
-                Full Stack Developer & Android Developer
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-300 min-h-[2.5em]">
+                <TypeAnimation
+                  sequence={[
+                    'AI Engineer',
+                    2000,
+                    'Full Stack Developer',
+                    2000,
+                    'Open Source Contributor',
+                    2000,
+                    'Project Lead',
+                    2000,
+                  ]}
+                  wrapper="span"
+                  speed={50}
+                  repeat={Infinity}
+                />
               </h2>
-            </div>
-
-            {/* Contact Info */}
-            <div className="flex flex-wrap gap-4 text-gray-400">
-              <a href="mailto:prajapativivek998@gmail.com" className="flex items-center gap-2 hover:text-white transition-colors">
-                <FaEnvelope className="text-primary" />
-                prajapativivek998@gmail.com
-              </a>
-              <a href="tel:+917393017587" className="flex items-center gap-2 hover:text-white transition-colors">
-                <FaPhone className="text-primary" />
-                +91 7393017587
-              </a>
             </div>
 
             {/* Brief Introduction */}
@@ -48,9 +52,9 @@ const Hero = () => {
             </p>
 
             {/* Skills */}
-            <div className="space-y-4">
+            <div className="space-y-2">
               <h3 className="text-xl font-semibold text-white">Technical Skills</h3>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-2">
                 {[
                   "HTML", "CSS", "JavaScript", "React",
                   "Core Java", "MongoDB", "MySQL",
@@ -62,7 +66,7 @@ const Hero = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
-                    className="px-4 py-2 rounded-full bg-gradient-to-r from-primary/10 to-secondary/10 text-gray-300 border border-white/10"
+                    className="px-3 py-1.5 rounded-full bg-gradient-to-r from-primary/10 to-secondary/10 text-gray-300 border border-white/10"
                   >
                     {skill}
                   </motion.span>
@@ -71,7 +75,7 @@ const Hero = () => {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-3">
               <motion.a
                 href="/contact"
                 whileHover={{ scale: 1.05 }}
@@ -95,9 +99,9 @@ const Hero = () => {
             </div>
 
             {/* Social Links */}
-            <div className="flex gap-4 pt-4">
+            <div className="flex gap-3 pt-2">
               <motion.a
-                href="https://github.com/yourusername"
+                href="https://github.com/codervivek5"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1, y: -2 }}
@@ -106,7 +110,7 @@ const Hero = () => {
                 <FaGithub />
               </motion.a>
               <motion.a
-                href="https://linkedin.com/in/yourusername"
+                href="https://linkedin.com/in/codervivek"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1, y: -2 }}
@@ -117,7 +121,7 @@ const Hero = () => {
             </div>
           </motion.div>
 
-          {/* Right Column - Animated Illustration */}
+          {/* Right Column - Profile Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -126,10 +130,13 @@ const Hero = () => {
           >
             <div className="aspect-square rounded-full bg-gradient-to-r from-primary/20 to-secondary/20 absolute inset-0 blur-3xl" />
             <div className="relative">
-              {/* You can add your profile image or a related illustration here */}
-              <div className="w-full aspect-square rounded-2xl bg-gradient-to-r from-primary/10 to-secondary/10 border border-white/10 p-8">
-                <div className="w-full h-full rounded-xl bg-dark-light/50 backdrop-blur-xl flex items-center justify-center">
-                  <span className="text-6xl">👨‍💻</span>
+              <div className="w-full aspect-square rounded-2xl bg-gradient-to-r from-primary/10 to-secondary/10 border border-white/10 p-6">
+                <div className="w-full h-full rounded-xl bg-dark-light/50 backdrop-blur-xl overflow-hidden">
+                  <img 
+                    src={profileImg} 
+                    alt="Vivek Kumar" 
+                    className="w-full h-full object-cover object-center"
+                  />
                 </div>
               </div>
             </div>
