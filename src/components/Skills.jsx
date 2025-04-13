@@ -1,63 +1,72 @@
 import { motion } from 'framer-motion'
 import { 
-  FaHtml5, FaCss3Alt, FaJs, FaReact, FaNode, FaPython,
-  FaDatabase, FaGitAlt, FaDocker, FaAndroid, FaJava,
-  FaAws, FaFigma
+  FaHtml5, FaCss3Alt, FaJs, FaReact, FaNode, FaPython,FaApple,
+  FaGitAlt, FaDocker, FaAndroid, FaJava,
+  FaAws, FaFigma,FaChartBar, FaPalette, FaTrello, FaJira, FaSlack, FaBook, FaCogs, FaVideo
 } from 'react-icons/fa'
 import { 
   SiTailwindcss, SiMongodb, SiMysql, SiFirebase,
-  SiDjango, SiKotlin, SiTensorflow, SiScikitlearn
+  SiDjango, SiKotlin, SiTensorflow, SiScikitlearn,
+  SiPandas, SiNumpy
 } from 'react-icons/si'
 
 const skillCategories = [
   {
     title: 'Frontend Development',
     skills: [
-      { name: 'HTML5', icon: <FaHtml5 className="w-8 h-8" />, proficiency: 95 },
+      { name: 'HTML5', icon: <FaHtml5 className="w-8 h-8" />, proficiency: 85 },
       { name: 'CSS3', icon: <FaCss3Alt className="w-8 h-8" />, proficiency: 90 },
-      { name: 'JavaScript', icon: <FaJs className="w-8 h-8" />, proficiency: 85 },
-      { name: 'React', icon: <FaReact className="w-8 h-8" />, proficiency: 88 },
-      { name: 'Tailwind CSS', icon: <SiTailwindcss className="w-8 h-8" />, proficiency: 92 }
+      { name: 'JavaScript', icon: <FaJs className="w-8 h-8" />, proficiency: 65 },
+      { name: 'React', icon: <FaReact className="w-8 h-8" />, proficiency: 73 },
+      { name: 'Tailwind CSS', icon: <SiTailwindcss className="w-8 h-8" />, proficiency: 85 }
     ]
   },
   {
     title: 'Backend Development',
     skills: [
-      { name: 'Node.js', icon: <FaNode className="w-8 h-8" />, proficiency: 82 },
-      { name: 'Python', icon: <FaPython className="w-8 h-8" />, proficiency: 85 },
-      { name: 'Django', icon: <SiDjango className="w-8 h-8" />, proficiency: 80 },
-      { name: 'Java', icon: <FaJava className="w-8 h-8" />, proficiency: 85 }
+      { name: 'Django', icon: <SiDjango className="w-8 h-8" />, proficiency: 70 },
+      { name: 'Node.js', icon: <FaNode className="w-8 h-8" />, proficiency: 62 },
+      { name: 'Python', icon: <FaPython className="w-8 h-8" />, proficiency: 75 },
+      { name: 'Java', icon: <FaJava className="w-8 h-8" />, proficiency: 45 }
     ]
   },
   {
     title: 'Database & Cloud',
     skills: [
-      { name: 'MongoDB', icon: <SiMongodb className="w-8 h-8" />, proficiency: 88 },
-      { name: 'MySQL', icon: <SiMysql className="w-8 h-8" />, proficiency: 85 },
-      { name: 'Firebase', icon: <SiFirebase className="w-8 h-8" />, proficiency: 90 },
-      { name: 'AWS', icon: <FaAws className="w-8 h-8" />, proficiency: 75 }
+      { name: 'MongoDB', icon: <SiMongodb className="w-8 h-8" />, proficiency: 38 },
+      { name: 'MySQL', icon: <SiMysql className="w-8 h-8" />, proficiency: 75 },
+      { name: 'Firebase', icon: <SiFirebase className="w-8 h-8" />, proficiency: 55 },
+      { name: 'AWS', icon: <FaAws className="w-8 h-8" />, proficiency: 48 }
     ]
   },
   {
     title: 'Mobile Development',
     skills: [
-      { name: 'Android', icon: <FaAndroid className="w-8 h-8" />, proficiency: 88 },
-      { name: 'Kotlin', icon: <SiKotlin className="w-8 h-8" />, proficiency: 85 }
+      { name: 'Android', icon: <FaAndroid className="w-8 h-8" />, proficiency: 39 },
+      { name: 'iOS', icon: <FaApple className="w-8 h-8" />, proficiency: 43 },
+      { name: 'Kotlin', icon: <SiKotlin className="w-8 h-8" />, proficiency: 35 }
     ]
   },
   {
     title: 'Data Science',
     skills: [
-      { name: 'TensorFlow', icon: <SiTensorflow className="w-8 h-8" />, proficiency: 80 },
-      { name: 'Scikit-learn', icon: <SiScikitlearn className="w-8 h-8" />, proficiency: 82 }
+      { name: 'TensorFlow', icon: <SiTensorflow className="w-8 h-8" />, proficiency: 65 },
+      { name: 'Scikit-learn', icon: <SiScikitlearn className="w-8 h-8" />, proficiency: 52 },
+      { name: 'Pandas', icon: <SiPandas className="w-8 h-8" />, proficiency: 50 },
+      { name: 'NumPy', icon: <SiNumpy className="w-8 h-8" />, proficiency: 42 },
+      { name: 'Matplotlib', icon: <FaChartBar className="w-8 h-8" />, proficiency: 75 }
     ]
   },
   {
     title: 'Tools & Others',
     skills: [
-      { name: 'Git', icon: <FaGitAlt className="w-8 h-8" />, proficiency: 92 },
-      { name: 'Docker', icon: <FaDocker className="w-8 h-8" />, proficiency: 78 },
-      { name: 'Figma', icon: <FaFigma className="w-8 h-8" />, proficiency: 85 }
+      { name: 'Git / GitHub', icon: <FaGitAlt className="w-8 h-8" />, proficiency: 92 },
+      { name: 'Docker', icon: <FaDocker className="w-8 h-8" />, proficiency: 36 },
+      { name: 'Figma', icon: <FaFigma className="w-8 h-8" />, proficiency: 78 },
+      { name: 'Canva', icon: <FaPalette className="w-8 h-8" />, proficiency: 85 },
+      { name: 'Jira', icon: <FaJira className="w-8 h-8" />, proficiency: 67 },
+      { name: 'Notion', icon: <FaBook className="w-8 h-8" />, proficiency: 78 },
+      { name: 'Postman', icon: <FaCogs className="w-8 h-8" />, proficiency: 75 },
     ]
   }
 ]

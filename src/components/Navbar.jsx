@@ -7,7 +7,7 @@ import Logo from './Logo'
 const menuItems = [
   { title: 'HOME', path: '/' },
   { title: 'RESUME', path: '/about' },
-  { title: 'WORKS', path: '/works' },
+  { title: 'PROJECTS', path: '/projects' },
   { title: 'SERVICE', path: '/service' },
   { title: 'CONTACT', path: '/contact' }
 ]
@@ -40,8 +40,8 @@ const Navbar = () => {
         animate={{ y: 0 }}
         transition={{ type: "spring", stiffness: 100 }}
         className={`fixed w-full top-0 z-50 transition-all duration-500 ${scrolled
-            ? 'bg-dark/75 backdrop-blur-xl border-b border-white/5 shadow-lg shadow-primary/5'
-            : 'bg-transparent'
+          ? 'bg-dark/75 backdrop-blur-xl border-b border-white/5 shadow-lg shadow-primary/5'
+          : 'bg-transparent'
           }`}
       >
         <div className="w-full max-w-[2000px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -54,7 +54,7 @@ const Navbar = () => {
             >
               <Link to="/" className="flex items-center">
                 {/* Logo Text */}
-                <Logo/>
+                <Logo />
               </Link>
             </motion.div>
 
@@ -69,8 +69,8 @@ const Navbar = () => {
                   <Link
                     to={item.path}
                     className={`relative px-4 py-2 text-sm tracking-wider transition-colors rounded-lg group overflow-hidden ${location.pathname === item.path
-                        ? 'text-white'
-                        : 'text-gray-300 hover:text-white'
+                      ? 'text-white'
+                      : 'text-gray-300 hover:text-white'
                       }`}
                   >
                     <span className="relative z-10">{item.title}</span>
@@ -95,35 +95,35 @@ const Navbar = () => {
                 background: 'linear-gradient(to right, rgba(255,27,107,0.1), rgba(69,202,255,0.1))',
               }}
             >
-              <div className="relative w-6 h-5">
+              <div className="relative w-6 h-5 flex flex-col justify-between items-center">
                 <motion.span
-                  className="absolute w-6 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full"
+                  className="block w-6 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full origin-center"
                   animate={{
-                    top: isOpen ? "50%" : "0%",
                     rotate: isOpen ? 45 : 0,
-                    translateY: isOpen ? "-50%" : 0
+                    y: isOpen ? 8 : 0,
                   }}
                   transition={{ duration: 0.3 }}
-                ></motion.span>
+                />
                 <motion.span
-                  className="absolute top-1/2 w-6 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full"
+                  className="block w-6 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full origin-center"
                   animate={{
                     opacity: isOpen ? 0 : 1,
-                    translateY: "-50%"
                   }}
                   transition={{ duration: 0.3 }}
-                ></motion.span>
+                />
                 <motion.span
-                  className="absolute w-6 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full"
+                  className="block w-6 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full origin-center"
                   animate={{
-                    bottom: isOpen ? "50%" : "0%",
                     rotate: isOpen ? -45 : 0,
-                    translateY: isOpen ? "50%" : 0
+                    y: isOpen ? -8 : 0,
                   }}
                   transition={{ duration: 0.3 }}
-                ></motion.span>
+                />
               </div>
             </motion.button>
+
+
+
           </div>
         </div>
       </motion.nav>
@@ -167,8 +167,8 @@ const Navbar = () => {
                       <Link
                         to={item.path}
                         className={`block px-4 py-3 text-base sm:text-lg font-medium rounded-lg transition-all ${location.pathname === item.path
-                            ? 'text-white bg-white/5'
-                            : 'text-gray-300 hover:text-white hover:bg-white/5'
+                          ? 'text-white bg-white/5'
+                          : 'text-gray-300 hover:text-white hover:bg-white/5'
                           }`}
                         onClick={() => setIsOpen(false)}
                       >

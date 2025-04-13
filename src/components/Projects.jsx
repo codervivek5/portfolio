@@ -52,7 +52,7 @@ const projects = [
   }
 ]
 
-const Works = () => {
+const Projects = () => {
   return (
     <section id="works" className="py-20 relative">
       {/* Background gradient */}
@@ -141,4 +141,4 @@ const Works = () => {
   )
 }
 
-export default Works 
+export default Projects 

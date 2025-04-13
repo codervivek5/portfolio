@@ -1,18 +1,21 @@
 import { motion } from 'framer-motion'
-import { FaGithub, FaLinkedin, FaDownload, FaEnvelope, FaPhone } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaDownload, FaEnvelope, FaPhone, FaInstagram, FaYoutube, FaWhatsapp, FaTelegram, FaTwitter } from 'react-icons/fa'
 import { TypeAnimation } from 'react-type-animation'
 import profileImg from '../assets/profile.png'
+import { Link } from 'react-router-dom'
 
 const Hero = () => {
+  const MotionLink = motion(Link);
+
   return (
     <section className="min-h-screen flex items-center py-12 relative">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-dark via-dark/50 to-dark/80 pointer-events-none" />
-      
+
       <div className="relative z-10 w-full">
         <div className="grid lg:grid-cols-2 gap-8 items-start">
           {/* Left Column - Text Content */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -46,20 +49,21 @@ const Hero = () => {
 
             {/* Brief Introduction */}
             <p className="text-gray-400 text-lg leading-relaxed">
-              Passionate Full Stack Developer with expertise in web and Android development. 
-              Experienced in building modern web applications and mobile solutions. 
+              Passionate Full Stack Developer, Data Analyst, and AI/ML enthusiast with expertise in web Development, and data-driven development.
+              Experienced in building modern web applications, mobile solutions, and extracting insights from data.
               Open-source contributor and project lead with a track record of managing successful projects.
             </p>
+
 
             {/* Skills */}
             <div className="space-y-2">
               <h3 className="text-xl font-semibold text-white">Technical Skills</h3>
               <div className="flex flex-wrap gap-2">
                 {[
-                  "HTML", "CSS", "JavaScript", "React",
-                  "Core Java", "MongoDB", "MySQL",
-                  "Git", "Android", "Kotlin",
-                  "Firebase", "Django"
+                  "Python", "NumPy", "pandas", "Scikit-learn", "Django",
+                  "React", "TensorFlow", "HuggingFace",
+                  "Tablue", "Power BI", "MongoDB", "MySQL",
+                  "Git", "GitHub", "Firebase",
                 ].map((skill, index) => (
                   <motion.span
                     key={skill}
@@ -76,17 +80,17 @@ const Hero = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-3">
-              <motion.a
-                href="/contact"
+              <MotionLink
+                to="/contact"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-6 py-3 rounded-lg bg-gradient-to-r from-primary to-secondary text-white font-medium hover:shadow-lg hover:shadow-primary/25 transition-shadow"
               >
                 Get in Touch
-              </motion.a>
-              
+              </MotionLink>
+
               <motion.a
-                href="/resume.pdf"
+                href="/src/assets/resume/vivek_resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
@@ -118,6 +122,34 @@ const Hero = () => {
               >
                 <FaLinkedin />
               </motion.a>
+              <motion.a
+                href="https://instagram.com/coder_vivek"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.1, y: -2 }}
+                className="text-2xl text-gray-400 hover:text-white transition-colors"
+              >
+                <FaInstagram />
+              </motion.a>
+              <motion.a
+                href="https://www.youtube.com/@codervivek"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.1, y: -2 }}
+                className="text-2xl text-gray-400 hover:text-white transition-colors"
+              >
+                <FaYoutube />
+              </motion.a>
+              
+              <motion.a
+                href="https://twitter.com/codervivek5"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.1, y: -2 }}
+                className="text-2xl text-gray-400 hover:text-white transition-colors"
+              >
+                <FaTwitter />
+              </motion.a>
             </div>
           </motion.div>
 
@@ -132,9 +164,9 @@ const Hero = () => {
             <div className="relative">
               <div className="w-full aspect-square rounded-2xl bg-gradient-to-r from-primary/10 to-secondary/10 border border-white/10 p-6">
                 <div className="w-full h-full rounded-xl bg-dark-light/50 backdrop-blur-xl overflow-hidden">
-                  <img 
-                    src={profileImg} 
-                    alt="Vivek Kumar" 
+                  <img
+                    src={profileImg}
+                    alt="Vivek Kumar"
                     className="w-full h-full object-cover object-center"
                   />
                 </div>

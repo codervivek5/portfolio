@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import Hero from './Hero'
 import Skills from './Skills'
 import Service from './Service'
-import Works from './Works'
+import Works from './Projects'
 import Contact from './Contact'
 
 const Home = () => {
