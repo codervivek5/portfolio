@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
+import Logo from './Logo'
 // import profileImg from '../assets/profile.jpg' // You'll need to add your image to this location
 
 const menuItems = [
   { title: 'HOME', path: '/' },
-  { title: 'ABOUT', path: '/about' },
-  { title: 'WORKS', path: '/works' },
+  { title: 'RESUME', path: '/about' },
+  { title: 'PROJECTS', path: '/projects' },
   { title: 'SERVICE', path: '/service' },
   { title: 'CONTACT', path: '/contact' }
 ]
@@ -20,6 +21,7 @@ const socialLinks = [
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const location = useLocation()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,52 +35,51 @@ const Navbar = () => {
 
   return (
     <>
-      <motion.nav 
+      <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        className={`fixed w-full top-0 z-50 transition-all duration-500 ${
-          scrolled 
-            ? 'bg-dark/75 backdrop-blur-xl border-b border-white/5 shadow-lg shadow-primary/5' 
-            : 'bg-transparent'
-        }`}
+        transition={{ type: "spring", stiffness: 100 }}
+        className={`fixed w-full top-0 z-50 transition-all duration-500 ${scrolled
+          ? 'bg-dark/75 backdrop-blur-xl border-b border-white/5 shadow-lg shadow-primary/5'
+          : 'bg-transparent'
+          }`}
       >
         <div className="w-full max-w-[2000px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <motion.div
               whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
               className="relative flex items-center"
             >
               <Link to="/" className="flex items-center">
                 {/* Logo Text */}
-                <h1 
-                  className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight whitespace-nowrap"
-                  style={{
-                    background: 'linear-gradient(to right, #FF1B6B, #45CAFF)',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                    backgroundClip: 'text',
-                  }}
-                >
-                  CODERVIVEK
-                </h1>
+                <Logo />
               </Link>
             </motion.div>
 
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-4 lg:space-x-6">
               {menuItems.map((item) => (
-                <motion.div key={item.title} whileHover={{ scale: 1.05 }}>
+                <motion.div
+                  key={item.title}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
                   <Link
                     to={item.path}
-                    className="relative px-4 py-2 text-sm tracking-wider text-gray-300 hover:text-white transition-colors rounded-lg group overflow-hidden"
+                    className={`relative px-4 py-2 text-sm tracking-wider transition-colors rounded-lg group overflow-hidden ${location.pathname === item.path
+                      ? 'text-white'
+                      : 'text-gray-300 hover:text-white'
+                      }`}
                   >
                     <span className="relative z-10">{item.title}</span>
                     <motion.div
                       className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                       whileHover={{ scale: 1.2 }}
                     />
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
+                    <span className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-primary to-secondary transition-all duration-300 ${location.pathname === item.path ? 'w-full' : 'w-0 group-hover:w-full'
+                      }`}></span>
                   </Link>
                 </motion.div>
               ))}
@@ -94,35 +95,35 @@ const Navbar = () => {
                 background: 'linear-gradient(to right, rgba(255,27,107,0.1), rgba(69,202,255,0.1))',
               }}
             >
-              <div className="relative w-6 h-5">
+              <div className="relative w-6 h-5 flex flex-col justify-between items-center">
                 <motion.span
-                  className="absolute w-6 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full"
+                  className="block w-6 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full origin-center"
                   animate={{
-                    top: isOpen ? "50%" : "0%",
                     rotate: isOpen ? 45 : 0,
-                    translateY: isOpen ? "-50%" : 0
+                    y: isOpen ? 8 : 0,
                   }}
                   transition={{ duration: 0.3 }}
-                ></motion.span>
+                />
                 <motion.span
-                  className="absolute top-1/2 w-6 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full"
+                  className="block w-6 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full origin-center"
                   animate={{
                     opacity: isOpen ? 0 : 1,
-                    translateY: "-50%"
                   }}
                   transition={{ duration: 0.3 }}
-                ></motion.span>
+                />
                 <motion.span
-                  className="absolute w-6 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full"
+                  className="block w-6 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full origin-center"
                   animate={{
-                    bottom: isOpen ? "50%" : "0%",
                     rotate: isOpen ? -45 : 0,
-                    translateY: isOpen ? "50%" : 0
+                    y: isOpen ? -8 : 0,
                   }}
                   transition={{ duration: 0.3 }}
-                ></motion.span>
+                />
               </div>
             </motion.button>
+
+
+
           </div>
         </div>
       </motion.nav>
@@ -138,7 +139,7 @@ const Navbar = () => {
               className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40"
               onClick={() => setIsOpen(false)}
             />
-            
+
             <motion.div
               initial={{ opacity: 0, x: "100%" }}
               animate={{ opacity: 1, x: 0 }}
@@ -159,13 +160,16 @@ const Navbar = () => {
                     </svg>
                   </motion.button>
                 </div>
-                
+
                 <div className="space-y-1">
                   {menuItems.map((item, index) => (
                     <motion.div key={item.title}>
                       <Link
                         to={item.path}
-                        className="block px-4 py-3 text-base sm:text-lg font-medium text-gray-300 hover:text-white rounded-lg hover:bg-white/5 transition-all"
+                        className={`block px-4 py-3 text-base sm:text-lg font-medium rounded-lg transition-all ${location.pathname === item.path
+                          ? 'text-white bg-white/5'
+                          : 'text-gray-300 hover:text-white hover:bg-white/5'
+                          }`}
                         onClick={() => setIsOpen(false)}
                       >
                         <motion.div

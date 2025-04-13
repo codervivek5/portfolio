@@ -1,13 +1,15 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
-import { FaLinkedin, FaGithub, FaInstagram, FaWhatsapp, FaTelegram } from 'react-icons/fa'
+import { FaLinkedin, FaGithub, FaInstagram, FaWhatsapp, FaTelegram, FaTwitter, FaYoutube } from 'react-icons/fa'
 
 const socialLinks = [
-  { title: 'LinkedIn', path: 'https://linkedin.com/in/yourusername', icon: FaLinkedin },
-  { title: 'GitHub', path: 'https://github.com/yourusername', icon: FaGithub },
-  { title: 'Instagram', path: 'https://instagram.com/yourusername', icon: FaInstagram },
-  { title: 'WhatsApp', path: 'https://wa.me/yournumber', icon: FaWhatsapp },
-  { title: 'Telegram', path: 'https://t.me/yourusername', icon: FaTelegram }
+  { title: 'LinkedIn', path: 'https://linkedin.com/in/codervivek', icon: FaLinkedin },
+  { title: 'GitHub', path: 'https://github.com/codervivek5', icon: FaGithub },
+  { title: 'Instagram', path: 'https://instagram.com/coder_vivek', icon: FaInstagram },
+  { title: 'YouTube', path: 'https://www.youtube.com/@codervivek', icon: FaYoutube },
+  { title: 'WhatsApp', path: 'https://wa.me/917393017587', icon: FaWhatsapp },
+  { title: 'Telegram', path: 'https://t.me/codervivek', icon: FaTelegram },
+  { title: 'Twitter', path: 'https://twitter.com/codervivek5', icon: FaTwitter }
 ]
 
 const Contact = () => {
@@ -31,7 +33,7 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="py-20 relative">
+    <section id="contact" className="py-20 mt-10 relative">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-dark via-dark/50 to-dark/80 pointer-events-none" />
       
@@ -58,10 +60,10 @@ const Contact = () => {
               <div>
                 <h4 className="text-lg font-medium text-white mb-2">CONTACT</h4>
                 <a 
-                  href="mailto:web.smith.xyz@gmail.com"
+                  href="mailto:prajapativivek998@gmail.com"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  web.smith.xyz@gmail.com
+                  prajapativivek998@gmail.com
                 </a>
               </div>
 
