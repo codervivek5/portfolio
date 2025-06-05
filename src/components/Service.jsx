@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
-import { 
-  FaCode, FaMobile, FaDatabase, 
-  FaChartLine, FaCloud, FaTools 
+import {
+  FaCode, FaMobile, FaDatabase,
+  FaChartLine, FaCloud, FaTools
 } from 'react-icons/fa'
 
 const services = [
@@ -25,21 +25,22 @@ const services = [
   },
   {
     icon: <FaChartLine className="w-8 h-8" />,
-    title: 'Data Science Solutions',
-    description: 'Implementing machine learning models and data analysis solutions. Transforming raw data into actionable insights using advanced analytics and visualization.',
-    technologies: ['Python', 'TensorFlow', 'Scikit-learn', 'Data Analysis', 'ML Models']
+    title: 'Generative AI & Data Intelligence',
+    description: 'Building GenAI-powered solutions with advanced LLMs, RAG pipelines, and real-time analytics. Turning raw data into intelligent, human-like outputs using modern AI stacks.',
+    technologies: ['Python', 'LangChain', 'LlamaIndex', 'OpenAI API', 'Vector DBs', 'LLMs', 'RAG', 'Streamlit']
   },
+
   {
     icon: <FaCloud className="w-8 h-8" />,
     title: 'Cloud Integration',
     description: 'Deploying and managing applications on cloud platforms. Setting up CI/CD pipelines, containerization, and ensuring scalable infrastructure.',
-    technologies: ['AWS', 'Docker', 'CI/CD', 'Cloud Architecture', 'DevOps']
+    technologies: ['AWS',"GCP", 'Docker', 'CI/CD', 'Cloud Architecture',]
   },
   {
     icon: <FaTools className="w-8 h-8" />,
     title: 'Technical Consultation',
     description: 'Providing expert technical guidance for your projects. Offering solutions for architecture design, technology selection, and best practices implementation.',
-    technologies: ['Architecture Design', 'Tech Stack Selection', 'Code Review', 'Performance Optimization']
+    technologies: ['Architecture Design', 'Tech Stack Selection', 'Code Review', 'Performance Optimization',"Open-Source Contribution Guide"]
   }
 ]
 
@@ -48,7 +49,7 @@ const Service = () => {
     <section id="service" className="py-20 relative">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-dark via-dark/50 to-dark/80 pointer-events-none" />
-      
+
       <div className="relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -64,7 +65,7 @@ const Service = () => {
             Comprehensive solutions tailored to your technical needs, from web development to data science
           </p>
         </motion.div>
-        
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (

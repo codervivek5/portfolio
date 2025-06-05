@@ -3,53 +3,45 @@ import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
 
 const projects = [
   {
+    title: 'VigyBag - Eco friendly Ecommerce Platform',
+    description: 'Full-stack e-commerce platform with React, Node.js, and MongoDB',
+    image: '/project/vigybag.png',
+    demoLink: 'https://www.vigybag.com/',
+    githubLink: 'https://github.com/codervivek5/vigyBag/',
+    technologies: ['React', 'Django', 'Python', 'Mysql', 'Tailwind CSS']
+  },
+  {
     title: 'E-Commerce Platform',
     description: 'Full-stack e-commerce platform with React, Node.js, and MongoDB',
-    image: '/project1.jpg',
+    image: '/project/joyehotels.png',
     demoLink: '#',
     githubLink: '#',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Express']
+    technologies: ['React', 'Django', 'Python', 'Mysql', 'Tailwind CSS']
   },
   {
-    title: 'AI Image Generator',
-    description: 'Image generation app using machine learning and Python',
-    image: '/project2.jpg',
-    demoLink: '#',
+    title: 'Vasundhara Biofibers',
+    description: 'Development of eco-friendly tableware products using biodegradable materials to replace traditional plastic items.',
+    image: '/project/vasundharabiofibers.png',
+    demoLink: 'https://www.vasundharabiofibers.com/',
     githubLink: '#',
-    technologies: ['Python', 'TensorFlow', 'Flask', 'React']
-  },
-  {
-    title: 'Task Management App',
-    description: 'Android task management application with cloud sync',
-    image: '/project3.jpg',
-    demoLink: '#',
-    githubLink: '#',
-    technologies: ['Android', 'Kotlin', 'Firebase']
-  },
-  {
-    title: 'Data Analytics Dashboard',
-    description: 'Interactive dashboard for data visualization',
-    image: '/project4.jpg',
-    demoLink: '#',
-    githubLink: '#',
-    technologies: ['React', 'D3.js', 'Node.js', 'MongoDB']
-  },
-  {
-    title: 'Social Media API',
-    description: 'RESTful API for social media platform',
-    image: '/project5.jpg',
-    demoLink: '#',
-    githubLink: '#',
-    technologies: ['Node.js', 'Express', 'MongoDB', 'JWT']
+    technologies: ['JavaScript', 'Tailwind', 'HTML', "CSS", "NPM", "Vite", "React"]
   },
   {
     title: 'Portfolio Website',
     description: 'Modern portfolio website with React and Framer Motion',
-    image: '/project6.jpg',
+    image: '/project/vivek_portfolio.png',
+    demoLink: 'https://portfolio-wheat-seven-86.vercel.app/',
+    githubLink: 'https://github.com/codervivek5/portfolio/',
+    technologies: ['React', 'Tailwind CSS', 'Framer Motion']
+  },
+  {
+    title: 'RAG Based ChatBot',
+    description: 'Retrieval-Augmented Generation chatbot using LangChain, OpenAI APIs, and LLMs for enhanced real-time responses.',
+    image: '/project/project5.jpg',
     demoLink: '#',
     githubLink: '#',
-    technologies: ['React', 'Tailwind CSS', 'Framer Motion']
-  }
+    technologies: ['LangChain', 'OpenAI', 'LLM', "Streamlit"]
+  },
 ]
 
 const Projects = () => {
@@ -57,7 +49,7 @@ const Projects = () => {
     <section id="works" className="py-20 relative">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-dark via-dark/50 to-dark/80 pointer-events-none" />
-      
+
       <div className="relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -93,13 +85,13 @@ const Projects = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-60" />
                 </div>
-                
+
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                     {project.title}
                   </h3>
                   <p className="text-gray-400 mb-4">{project.description}</p>
-                  
+
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.map((tech, techIndex) => (
                       <span
@@ -110,7 +102,7 @@ const Projects = () => {
                       </span>
                     ))}
                   </div>
-                  
+
                   <div className="flex gap-4">
                     <a
                       href={project.demoLink}
