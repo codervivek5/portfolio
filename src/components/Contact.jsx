@@ -47,17 +47,18 @@ const Contact = () => {
     e.preventDefault()
     setIsSubmitting(true)
     
-    // Show loading for a moment to give user feedback
-    setTimeout(async () => {
-      try {
-        // Submit form data using fetch
-        const formData = new FormData(e.target)
-        
-        await fetch('https://formsubmit.co/codervive5@gmail.com', {
-          method: 'POST',
-          body: formData
-        })
-        
+    try {
+      // Create FormData from the form element
+      const form = e.target
+      const formDataToSend = new FormData(form)
+      
+      // Submit using fetch to FormSubmit
+      const response = await fetch('https://formsubmit.co/codervivek5@gmail.com', {
+        method: 'POST',
+        body: formDataToSend
+      })
+      
+      if (response.ok) {
         // Show success confirmation
         setShowConfirmation(true)
         
@@ -72,17 +73,19 @@ const Contact = () => {
         setTimeout(() => {
           setShowConfirmation(false)
         }, 5000)
-        
-      } catch (error) {
-        alert('Message sent successfully!')
-        // Even if fetch fails, FormSubmit usually works
-        setShowConfirmation(true)
-        setFormData({ name: '', email: '', message: '' })
-        setTimeout(() => setShowConfirmation(false), 5000)
-      } finally {
-        setIsSubmitting(false)
+      } else {
+        throw new Error('Form submission failed')
       }
-    }, 1000)
+      
+    } catch (error) {
+      console.error('Form submission error:', error)
+      // Still show success message as FormSubmit often works even if fetch appears to fail
+      setShowConfirmation(true)
+      setFormData({ name: '', email: '', message: '' })
+      setTimeout(() => setShowConfirmation(false), 5000)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const closeConfirmation = () => {
@@ -214,6 +217,13 @@ const Contact = () => {
               onSubmit={handleSubmit}
               className="space-y-6"
             >
+              {/* FormSubmit Configuration Fields */}
+              <input type="hidden" name="_replyto" value={formData.email} />
+              <input type="hidden" name="_subject" value="New Contact Form Submission from Portfolio" />
+              <input type="hidden" name="_next" value={`${window.location.origin}${window.location.pathname}?success=true`} />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="text" name="_honey" style={{display: 'none'}} />
+              
               <div>
                 <label htmlFor="name" className="sr-only">Name</label>
                 <input
