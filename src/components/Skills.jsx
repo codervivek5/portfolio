@@ -1,14 +1,29 @@
 import { motion } from 'framer-motion'
-import { 
-  FaHtml5, FaCss3Alt, FaJs, FaReact, FaNode, FaPython,FaApple,
-  FaGitAlt, FaDocker, FaAndroid, FaJava,
-  FaAws, FaFigma,FaChartBar, FaPalette, FaTrello, FaJira, FaSlack, FaBook, FaCogs, FaVideo
-} from 'react-icons/fa'
-import { 
-  SiTailwindcss, SiMongodb, SiMysql, SiFirebase,
-  SiDjango, SiKotlin, SiTensorflow, SiScikitlearn,
-  SiPandas, SiNumpy
-} from 'react-icons/si'
+import {
+  FaHtml5, FaCss3Alt, FaJs, FaReact, FaNode, FaPython, FaApple,
+  FaGitAlt, FaDocker, FaAndroid, FaJava, FaChartBar,
+  FaAws, FaFigma, FaPalette, FaTrello, FaJira, FaSlack, FaBook, FaCogs, FaVideo,
+  FaDatabase, FaBrain
+} from 'react-icons/fa';
+
+import {
+  SiTailwindcss,
+  SiMongodb,
+  SiMysql,
+  SiFirebase,
+  SiDjango,
+  SiKotlin,
+  SiTensorflow,
+  SiScikitlearn,
+  SiPandas,
+  SiNumpy,
+  SiXcode,
+  SiHuggingface,
+  SiOpenai,
+  SiPostgresql,
+  SiLangchain,
+  SiPython
+} from 'react-icons/si';
 
 const skillCategories = [
   {
@@ -26,8 +41,7 @@ const skillCategories = [
     skills: [
       { name: 'Django', icon: <SiDjango className="w-8 h-8" />, proficiency: 70 },
       { name: 'Node.js', icon: <FaNode className="w-8 h-8" />, proficiency: 62 },
-      { name: 'Python', icon: <FaPython className="w-8 h-8" />, proficiency: 75 },
-      { name: 'Java', icon: <FaJava className="w-8 h-8" />, proficiency: 45 }
+      { name: 'Python', icon: <FaPython className="w-8 h-8" />, proficiency: 75 }
     ]
   },
   {
@@ -36,7 +50,7 @@ const skillCategories = [
       { name: 'MongoDB', icon: <SiMongodb className="w-8 h-8" />, proficiency: 38 },
       { name: 'MySQL', icon: <SiMysql className="w-8 h-8" />, proficiency: 75 },
       { name: 'Firebase', icon: <SiFirebase className="w-8 h-8" />, proficiency: 55 },
-      { name: 'AWS', icon: <FaAws className="w-8 h-8" />, proficiency: 48 }
+      { name: 'AWS', icon: <FaAws className="w-8 h-8" />, proficiency: 38 }
     ]
   },
   {
@@ -44,17 +58,23 @@ const skillCategories = [
     skills: [
       { name: 'Android', icon: <FaAndroid className="w-8 h-8" />, proficiency: 39 },
       { name: 'iOS', icon: <FaApple className="w-8 h-8" />, proficiency: 43 },
+      { name: 'Xcode', icon: <SiXcode className="w-8 h-8" />, proficiency: 68 },
       { name: 'Kotlin', icon: <SiKotlin className="w-8 h-8" />, proficiency: 35 }
     ]
   },
   {
-    title: 'Data Science',
+    title: 'Data Science & GenAI',
     skills: [
       { name: 'TensorFlow', icon: <SiTensorflow className="w-8 h-8" />, proficiency: 65 },
       { name: 'Scikit-learn', icon: <SiScikitlearn className="w-8 h-8" />, proficiency: 52 },
       { name: 'Pandas', icon: <SiPandas className="w-8 h-8" />, proficiency: 50 },
       { name: 'NumPy', icon: <SiNumpy className="w-8 h-8" />, proficiency: 42 },
-      { name: 'Matplotlib', icon: <FaChartBar className="w-8 h-8" />, proficiency: 75 }
+      { name: 'Matplotlib', icon: <FaChartBar className="w-8 h-8" />, proficiency: 75 },
+      { name: 'LangChain', icon: <SiLangchain className="w-8 h-8" />, proficiency: 45 },
+      { name: 'Transformers', icon: <SiHuggingface className="w-8 h-8" />, proficiency: 50 },
+      { name: 'LLMs', icon: <SiOpenai className="w-8 h-8" />, proficiency: 55 },
+      { name: 'Pinecone', icon: <FaBrain className="w-8 h-8" />, proficiency: 35 },
+      { name: 'Vector DB', icon: <FaDatabase className="w-8 h-8" />, proficiency: 40 }
     ]
   },
   {
@@ -66,7 +86,7 @@ const skillCategories = [
       { name: 'Canva', icon: <FaPalette className="w-8 h-8" />, proficiency: 85 },
       { name: 'Jira', icon: <FaJira className="w-8 h-8" />, proficiency: 67 },
       { name: 'Notion', icon: <FaBook className="w-8 h-8" />, proficiency: 78 },
-      { name: 'Postman', icon: <FaCogs className="w-8 h-8" />, proficiency: 75 },
+      { name: 'Postman', icon: <FaCogs className="w-8 h-8" />, proficiency: 75 }
     ]
   }
 ]
@@ -76,10 +96,10 @@ const Skills = () => {
     <section id="technologies" className="py-20 relative">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-dark via-dark/50 to-dark/80 pointer-events-none" />
-      
+
       <div className="relative z-10">
         <div className="text-center mb-16">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -143,4 +163,4 @@ const Skills = () => {
   )
 }
 
-export default Skills 
+export default Skills

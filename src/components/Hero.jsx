@@ -49,9 +49,7 @@ const Hero = () => {
 
             {/* Brief Introduction */}
             <p className="text-gray-400 text-lg leading-relaxed">
-              Passionate Full Stack Developer, Data Analyst, and AI/ML enthusiast with expertise in web Development, and data-driven development.
-              Experienced in building modern web applications, mobile solutions, and extracting insights from data.
-              Open-source contributor and project lead with a track record of managing successful projects.
+              Passionate Full Stack Developer, Data Analyst, and AI/ML enthusiast with expertise in web and data-driven development. Experienced in building modern web and mobile applications, extracting insights from data, and leading open-source projects successfully.
             </p>
 
 
@@ -60,10 +58,10 @@ const Hero = () => {
               <h3 className="text-xl font-semibold text-white">Technical Skills</h3>
               <div className="flex flex-wrap gap-2">
                 {[
-                  "Python", "NumPy", "pandas", "Scikit-learn", "Django",
+                  "Python", "NumPy", "pandas", "Scikit-learn","LLM", "Transformer", "Django", "LangChain", "FastAPI",
                   "React", "TensorFlow", "HuggingFace",
                   "Tablue", "Power BI", "MongoDB", "MySQL",
-                  "Git", "GitHub", "Firebase",
+                  "Git", "GitHub", "Firebase","GCP","MCP Server",
                 ].map((skill, index) => (
                   <motion.span
                     key={skill}
