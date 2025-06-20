@@ -43,46 +43,10 @@ const Contact = () => {
     })
   }
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
+  const handleSubmit = (e) => {
     setIsSubmitting(true)
-    
-    // Show loading for a moment to give user feedback
-    setTimeout(async () => {
-      try {
-        // Submit form data using fetch
-        const formData = new FormData(e.target)
-        
-        await fetch('https://formsubmit.co/codervive5@gmail.com', {
-          method: 'POST',
-          body: formData
-        })
-        
-        // Show success confirmation
-        setShowConfirmation(true)
-        
-        // Reset form
-        setFormData({
-          name: '',
-          email: '',
-          message: ''
-        })
-        
-        // Auto-hide after 5 seconds
-        setTimeout(() => {
-          setShowConfirmation(false)
-        }, 5000)
-        
-      } catch (error) {
-        alert('Message sent successfully!')
-        // Even if fetch fails, FormSubmit usually works
-        setShowConfirmation(true)
-        setFormData({ name: '', email: '', message: '' })
-        setTimeout(() => setShowConfirmation(false), 5000)
-      } finally {
-        setIsSubmitting(false)
-      }
-    }, 1000)
+    // Let the form submit naturally to FormSubmit
+    // FormSubmit will handle the redirect to the success page
   }
 
   const closeConfirmation = () => {
@@ -214,6 +178,13 @@ const Contact = () => {
               onSubmit={handleSubmit}
               className="space-y-6"
             >
+              {/* FormSubmit Configuration Fields */}
+              <input type="hidden" name="_replyto" value={formData.email} />
+              <input type="hidden" name="_subject" value="New Contact Form Submission from Portfolio" />
+              <input type="hidden" name="_next" value={typeof window !== 'undefined' ? `${window.location.origin}${window.location.pathname}?success=true` : ''} />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="text" name="_honey" style={{display: 'none'}} />
+              
               <div>
                 <label htmlFor="name" className="sr-only">Name</label>
                 <input

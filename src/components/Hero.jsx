@@ -88,7 +88,7 @@ const Hero = () => {
               </MotionLink>
 
               <motion.a
-                href="/src/assets/resume/vivek_resume.pdf"
+                href="/src/assets/resume/Vivek_Kumar_genai.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
