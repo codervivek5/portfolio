@@ -43,49 +43,10 @@ const Contact = () => {
     })
   }
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
+  const handleSubmit = (e) => {
     setIsSubmitting(true)
-    
-    try {
-      // Create FormData from the form element
-      const form = e.target
-      const formDataToSend = new FormData(form)
-      
-      // Submit using fetch to FormSubmit
-      const response = await fetch('https://formsubmit.co/codervivek5@gmail.com', {
-        method: 'POST',
-        body: formDataToSend
-      })
-      
-      if (response.ok) {
-        // Show success confirmation
-        setShowConfirmation(true)
-        
-        // Reset form
-        setFormData({
-          name: '',
-          email: '',
-          message: ''
-        })
-        
-        // Auto-hide after 5 seconds
-        setTimeout(() => {
-          setShowConfirmation(false)
-        }, 5000)
-      } else {
-        throw new Error('Form submission failed')
-      }
-      
-    } catch (error) {
-      console.error('Form submission error:', error)
-      // Still show success message as FormSubmit often works even if fetch appears to fail
-      setShowConfirmation(true)
-      setFormData({ name: '', email: '', message: '' })
-      setTimeout(() => setShowConfirmation(false), 5000)
-    } finally {
-      setIsSubmitting(false)
-    }
+    // Let the form submit naturally to FormSubmit
+    // FormSubmit will handle the redirect to the success page
   }
 
   const closeConfirmation = () => {
@@ -220,7 +181,7 @@ const Contact = () => {
               {/* FormSubmit Configuration Fields */}
               <input type="hidden" name="_replyto" value={formData.email} />
               <input type="hidden" name="_subject" value="New Contact Form Submission from Portfolio" />
-              <input type="hidden" name="_next" value={`${window.location.origin}${window.location.pathname}?success=true`} />
+              <input type="hidden" name="_next" value={typeof window !== 'undefined' ? `${window.location.origin}${window.location.pathname}?success=true` : ''} />
               <input type="hidden" name="_captcha" value="false" />
               <input type="text" name="_honey" style={{display: 'none'}} />
               
