@@ -37,10 +37,10 @@ const projects = [
   {
     title: 'RAG Based ChatBot',
     description: 'Retrieval-Augmented Generation chatbot using LangChain, OpenAI APIs, and LLMs for enhanced real-time responses.',
-    image: '/project/project5.jpg',
+    image: '/project/DORA.png',
     demoLink: '#',
     githubLink: '#',
-    technologies: ['LangChain', 'OpenAI', 'LLM', "Streamlit"]
+    technologies: ['LangChain', 'Gemini', 'LLM', "Streamlit","Fast API", "Docker","RAG"]
   },
 ]
 

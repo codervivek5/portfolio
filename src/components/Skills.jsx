@@ -2,8 +2,8 @@ import { motion } from 'framer-motion'
 import {
   FaHtml5, FaCss3Alt, FaJs, FaReact, FaNode, FaPython, FaApple,
   FaGitAlt, FaDocker, FaAndroid, FaJava, FaChartBar,
-  FaAws, FaFigma, FaPalette, FaTrello, FaJira, FaSlack, FaBook, FaCogs, FaVideo,
-  FaDatabase, FaBrain
+  FaFigma, FaPalette, FaTrello, FaJira, FaSlack, FaBook, FaCogs, FaVideo,
+  FaDatabase, FaBrain,FaMicrosoft
 } from 'react-icons/fa';
 
 import {
@@ -20,9 +20,8 @@ import {
   SiXcode,
   SiHuggingface,
   SiOpenai,
-  SiPostgresql,
   SiLangchain,
-  SiPython
+  SiFastapi, 
 } from 'react-icons/si';
 
 const skillCategories = [
@@ -41,7 +40,10 @@ const skillCategories = [
     skills: [
       { name: 'Django', icon: <SiDjango className="w-8 h-8" />, proficiency: 70 },
       { name: 'Node.js', icon: <FaNode className="w-8 h-8" />, proficiency: 62 },
-      { name: 'Python', icon: <FaPython className="w-8 h-8" />, proficiency: 75 }
+      { name: 'Python', icon: <FaPython className="w-8 h-8" />, proficiency: 75 },
+      { name: 'Django Rest API', icon: <SiDjango className="w-8 h-8" />, proficiency: 55 },
+      { name: 'FastAPI', icon: <SiFastapi className="w-8 h-8" />, proficiency: 65 },
+      
     ]
   },
   {
@@ -50,7 +52,7 @@ const skillCategories = [
       { name: 'MongoDB', icon: <SiMongodb className="w-8 h-8" />, proficiency: 38 },
       { name: 'MySQL', icon: <SiMysql className="w-8 h-8" />, proficiency: 75 },
       { name: 'Firebase', icon: <SiFirebase className="w-8 h-8" />, proficiency: 55 },
-      { name: 'AWS', icon: <FaAws className="w-8 h-8" />, proficiency: 38 }
+      { name: 'Azure', icon: <FaMicrosoft className="w-8 h-8" />, proficiency: 38 }
     ]
   },
   {
@@ -131,7 +133,7 @@ const Skills = () => {
                       initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
-                      transition={{ delay: (categoryIndex * 0.1) + (skillIndex * 0.05) }}
+                      transition={{ delay: (categoryIndex * 0.1) + (skillIndex * 0.05) }} 
                       className="group"
                     >
                       <div className="flex items-center gap-4 mb-2">
