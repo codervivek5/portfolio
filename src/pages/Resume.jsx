@@ -8,8 +8,8 @@ const Resume = () => {
     email: 'prajapativivek998@gmail.com',
     phone: '+917393017587',
     location: 'Kanpur, India',
-    linkedin: 'https://linkedin.com/in/yourusername',
-    github: 'https://github.com/yourusername'
+    linkedin: 'https://linkedin.com/in/codervivek',
+    github: 'https://github.com/codervivek5'
   }
 
   const education = [
@@ -34,70 +34,106 @@ const Resume = () => {
   ]
 
   const experience = [
+    
     {
-      year: 'Sep 2023 - Apr 2024',
-      position: 'Junior Android Developer',
-      company: 'TechDilation',
+      year: 'July 2025 - Present',
+      position: 'Data Scientist',
+      company: 'Unimrkt Response',
       description: [
-        'Developed a Logistics tracking app in Android to targeting transportation logistics optimization',
-        'Integrated Firebase Authentication to ensure secure user authentication',
-        'Utilized Google Maps API to enhance mapping functionalities'
-      ]
-    },
-    {
-      year: '2022 - Present',
-      position: 'Freelance Developer',
-      company: 'Remote',
-      description: [
-        'Hotel Booking Website with Admin panel and Razorpay payment gateway',
-        'E-commerce site for selling eco-friendly products with AI chatbot feature',
-        'Tech Stack: React, Django, Firebase, HTML, CSS, JavaScript'
-      ]
+        'Developing an AI-driven chatbot leveraging LLMs, RAG (Retrieval-Augmented Generation), and LangChain for context-aware, intelligent conversations with real-time communication capabilities',
+        'Implementing AI agents and MCP server integration for automated task execution and enhanced system interoperability',
+        'Deploying scalable AI solutions on cloud infrastructure for high availability and performance optimization',
+        'Tech Stack: Python, FastAPI, PostgreSQL, Azure, Docker, LangChain, RAG, LLMs'
+      ]      
     }
   ]
 
   const skills = [
     {
       category: 'Frontend',
-      items: ['HTML', 'CSS', 'JavaScript', 'React']
+      items: ['HTML', 'CSS', 'JavaScript', 'React', 'Streamlit']
     },
     {
-      category: 'Backend',
-      items: ['Core Java', 'Django', 'MongoDB', 'MySQL']
+      category: 'Backend & AI',
+      items: [
+        'Python', 'Core Java', 'FastAPI', 'Django',
+        'MongoDB', 'MySQL', 'LangChain', 'RAG', 'LLMs',
+        'MCP Server', 'AI Agents'
+      ]
     },
     {
-      category: 'Mobile & Tools',
-      items: ['Android', 'Kotlin', 'Git', 'Firebase']
+      category: 'DevOps & Deployment',
+      items: ['Docker', 'Azure', 'Git', 'Firebase', 'CI/CD Pipelines', 'Cloud Deployment']
     }
   ]
+  
 
   const projects = [
     {
-      title: 'NEWS App',
-      description: 'College project for reading current and archived news using React.js and NEWS API',
-      link: '#'
+      title: 'VigyBag – Eco-Friendly E-commerce Platform',
+      description: 'A full-stack e-commerce platform for selling eco-friendly products worldwide, featuring AI chatbot integration for customer support and seamless shopping experience.',      
+      demoLink: 'https://www.vigybag.com/',
+      githubLink: 'https://github.com/codervivek5/vigyBag/',
+      technologies: ['React', 'Django', 'Python', 'MySQL', 'Tailwind CSS']
     },
     {
-      title: 'Open-Source Contributions',
-      description: 'Contributed to Girl Script Summer of Code 2022 and JWOC 2023',
-      link: '#'
+      title: 'Hotel Booking E-commerce Platform',
+      description: 'Full-stack hotel booking and e-commerce platform with secure payment integration, data analytics, and user-friendly UI.',     
+      demoLink: '#',
+      githubLink: '#',
+      technologies: ['React', 'Django', 'Python', 'MySQL', 'Tailwind CSS']
+    },
+    {
+      title: 'Vasundhara Biofibers – Sustainable Product Website',
+      description: 'Corporate website showcasing biodegradable tableware products, promoting sustainable living and reducing plastic waste.',      
+      demoLink: 'https://www.vasundharabiofibers.com/',
+      githubLink: '#',
+      technologies: ['JavaScript', 'React', 'Tailwind CSS', 'HTML', 'CSS', 'Vite', 'NPM']
+    },
+    {
+      title: 'Personal Portfolio Website',
+      description: 'A modern, responsive personal portfolio showcasing projects, skills, and achievements with smooth animations and a professional UI.',       
+      demoLink: 'https://portfolio-wheat-seven-86.vercel.app/',
+      githubLink: 'https://github.com/codervivek5/portfolio/',
+      technologies: ['React', 'Tailwind CSS', 'Framer Motion']
+    },
+    {
+      title: 'RAG-Based AI ChatBot',
+      description: 'An intelligent Retrieval-Augmented Generation chatbot using LangChain, LLMs, and OpenAI APIs with real-time communication, capable of context-aware responses and knowledge retrieval.',      
+      demoLink: '#',
+      githubLink: '#',
+      technologies: ['LangChain', 'OpenAI', 'LLMs', 'Streamlit', 'Python']
     }
   ]
+  
 
   const achievements = [
     {
-      title: 'Project Lead at Girl Script Summer of Code-2023',
-      description: 'Managed 50+ contributors, reviewed and merged 30+ PRs'
+      title: 'Project Admin – Open Source Connect India',
+      description: 'Led and managed the open-source project "VigyBag", guiding contributors in developing eco-friendly e-commerce features, reviewing PRs, and ensuring project scalability'
     },
     {
-      title: 'Project Admin at JWOC 2023',
-      description: 'Managed contributors and reviewed code, merged 20+ PRs'
+      title: 'Project Lead – Girl Script Summer of Code (2023 & 2024)',
+      description: 'Directed a team of 50+ contributors, reviewed and merged 70+ PRs, organized contributor onboarding sessions, and implemented best practices for open-source collaboration'
+    },
+    {
+      title: 'Project Admin – JWOC 2023',
+      description: 'Supervised contributors, performed code reviews, merged 20+ PRs, and improved project architecture for maintainability'
     },
     {
       title: 'Hackathon Participation',
-      description: 'Participated in College Hackathon and Internal SIH hackathon'
+      description: 'Participated in College Hackathon and Internal Smart India Hackathon (SIH), developed innovative prototypes under time constraints'
+    },
+    {
+      title: 'Open Source Contributor',
+      description: 'Contributed to multiple open-source projects involving AI chatbots, LLM integration, and data-driven applications using Python, FastAPI, and LangChain'
+    },
+    {
+      title: 'AI Chatbot Development',
+      description: 'Designed and deployed an AI-powered chatbot with RAG, LLMs, LangChain, and real-time communication, integrating cloud deployment and MCP server agents'
     }
   ]
+  
 
   return (
     <motion.div

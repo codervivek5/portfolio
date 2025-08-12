@@ -6,42 +6,47 @@ import {
 
 const services = [
   {
-    icon: <FaCode className="w-8 h-8" />,
-    title: 'Full Stack Development',
-    description: 'End-to-end web application development using modern technologies like React, Node.js, and Python. Creating responsive, scalable, and performant applications with clean code practices.',
-    technologies: ['React', 'Node.js', 'Python', 'MongoDB', 'REST APIs']
-  },
-  {
-    icon: <FaMobile className="w-8 h-8" />,
-    title: 'Mobile App Development',
-    description: 'Native Android application development using Kotlin and Java. Building user-friendly, feature-rich mobile apps with modern UI/UX practices and optimal performance.',
-    technologies: ['Android', 'Kotlin', 'Java', 'Firebase', 'RESTful APIs']
-  },
-  {
-    icon: <FaDatabase className="w-8 h-8" />,
-    title: 'Database Architecture',
-    description: 'Designing and implementing efficient database solutions. Creating scalable data models, optimizing queries, and ensuring data security and integrity.',
-    technologies: ['MongoDB', 'MySQL', 'Firebase', 'Data Modeling', 'Query Optimization']
-  },
-  {
     icon: <FaChartLine className="w-8 h-8" />,
     title: 'Generative AI & Data Intelligence',
-    description: 'Building GenAI-powered solutions with advanced LLMs, RAG pipelines, and real-time analytics. Turning raw data into intelligent, human-like outputs using modern AI stacks.',
-    technologies: ['Python', 'LangChain', 'LlamaIndex', 'OpenAI API', 'Vector DBs', 'LLMs', 'RAG', 'Streamlit']
+    description: 'Building advanced AI solutions with LLMs, RAG pipelines, and real-time analytics. Leveraging LangChain, MCP servers, and AI agents to deliver context-aware, human-like responses and intelligent automation.',
+    technologies: ['Python', 'LangChain', 'OpenAI API', 'Vector DBs','LLMs', 'RAG', 'Streamlit', 'FastAPI', 'MCP Server', 'AI Agents']
   },
+  {
+    icon: <FaCode className="w-8 h-8" />,
+    title: 'Full Stack Development',
+    description: 'Designing and delivering end-to-end web applications with modern stacks, integrating AI features, real-time communication, and scalable backend services. Experienced in building responsive, high-performance, and maintainable solutions with clean code practices.',
+    technologies: [
+      'React', 'Node.js', 'Python', 'REST APIs', 'Django', 'Django REST Framework',
+      'FastAPI', 'Tailwind CSS', 'Docker', 'Cloud Deployment'
+    ]
+  },
+    
+  // {
+  //   icon: <FaMobile className="w-8 h-8" />,
+  //   title: 'Mobile App Development',
+  //   description: 'Native Android application development using Kotlin and Java. Building user-friendly, feature-rich mobile apps with modern UI/UX practices and optimal performance.',
+  //   technologies: ['Android', 'Kotlin', 'Java', 'Firebase', 'RESTful APIs']
+  // },
+  {
+  icon: <FaDatabase className="w-8 h-8" />,
+  title: 'Database Architecture & Engineering',
+  description: 'Designing robust, secure, and high-performance database systems. Specializing in scalable data models, optimized queries, and maintaining data integrity for large-scale applications.',
+  technologies: ['MongoDB', 'MySQL', 'PostgreSQL', 'Firebase', 'Data Modeling', 'Query Optimization', 'Database Security']
+},
+  
+{
+  icon: <FaCloud className="w-8 h-8" />,
+  title: 'Cloud Deployment, DevOps & AI Infrastructure',
+  description: 'Deploying and managing real-time AI applications on cloud platforms with CI/CD automation, containerization, and scalable architectures. Experienced in integrating MCP servers, AI agents, and ensuring high availability for production-grade AI systems.',
+  technologies: ['AWS', 'GCP', 'Azure Portal','Azure DevOps', 'Docker', 'CI/CD', 'Cloud Architecture']
+},
+{
+  icon: <FaTools className="w-8 h-8" />,
+  title: 'Technical & Open-Source Consulting',
+  description: 'Advising on system architecture, tech stack choices, and best practices. Mentoring open-source contributors and optimizing performance for production-ready solutions.',
+  technologies: ['Architecture Design', 'Tech Stack Selection', 'Code Review', 'Performance Optimization', 'Open-Source Mentorship', 'Career Development', 'Technical Interview Preparation']
+}
 
-  {
-    icon: <FaCloud className="w-8 h-8" />,
-    title: 'Cloud Integration',
-    description: 'Deploying and managing applications on cloud platforms. Setting up CI/CD pipelines, containerization, and ensuring scalable infrastructure.',
-    technologies: ['AWS',"GCP", 'Docker', 'CI/CD', 'Cloud Architecture',]
-  },
-  {
-    icon: <FaTools className="w-8 h-8" />,
-    title: 'Technical Consultation',
-    description: 'Providing expert technical guidance for your projects. Offering solutions for architecture design, technology selection, and best practices implementation.',
-    technologies: ['Architecture Design', 'Tech Stack Selection', 'Code Review', 'Performance Optimization',"Open-Source Contribution Guide"]
-  }
 ]
 
 const Service = () => {

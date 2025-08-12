@@ -31,13 +31,11 @@ const Hero = () => {
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-300 min-h-[2.5em]">
                 <TypeAnimation
                   sequence={[
+                    'Data Scientist',
+                    2000,
                     'AI Engineer',
                     2000,
-                    'Full Stack Developer',
-                    2000,
                     'Open Source Contributor',
-                    2000,
-                    'Project Lead',
                     2000,
                   ]}
                   wrapper="span"
@@ -49,8 +47,10 @@ const Hero = () => {
 
             {/* Brief Introduction */}
             <p className="text-gray-400 text-lg leading-relaxed">
-              Passionate Full Stack Developer, Data Analyst, and AI/ML enthusiast with expertise in web and data-driven development. Experienced in building modern web and mobile applications, extracting insights from data, and leading open-source projects successfully.
+              Passionate Data Scientist, AI Engineer, and Open Source Contributor with expertise in AI chatbots, LLMs, RAG, LangChain, and FastAPI. Skilled in developing and deploying real-time intelligent applications, data-driven solutions, and leading impactful open-source projects.
             </p>
+
+
 
 
             {/* Skills */}
@@ -58,10 +58,10 @@ const Hero = () => {
               <h3 className="text-xl font-semibold text-white">Technical Skills</h3>
               <div className="flex flex-wrap gap-2">
                 {[
-                  "Python", "NumPy", "pandas", "Scikit-learn","LLM", "Transformer", "Django", "LangChain", "FastAPI",
+                  "Python", "NumPy", "pandas", "Scikit-learn", "LLM", "Transformer", "Django", "LangChain", "FastAPI",
                   "React", "TensorFlow", "HuggingFace",
-                  "Tablue", "Power BI", "MongoDB", "MySQL",
-                  "Git", "GitHub", "Firebase","GCP","MCP Server",
+                  "Tablue", "Azure", "MongoDB", "MySQL",
+                  "Git", "GitHub","Azure DevOps", "Firebase", "GCP", "MCP Server","Agets",
                 ].map((skill, index) => (
                   <motion.span
                     key={skill}
@@ -138,7 +138,7 @@ const Hero = () => {
               >
                 <FaYoutube />
               </motion.a>
-              
+
               <motion.a
                 href="https://twitter.com/codervivek5"
                 target="_blank"
