@@ -58,10 +58,10 @@ const Hero = () => {
               <h3 className="text-xl font-semibold text-white">Technical Skills</h3>
               <div className="flex flex-wrap gap-2">
                 {[
-                  "Python", "NumPy", "pandas", "Scikit-learn", "LLM", "Transformer", "Django", "LangChain", "FastAPI",
+                  "Python", "NumPy", "Pandas", "Scikit-learn", "LLM", "Transformer", "Django", "LangChain", "FastAPI",
                   "React", "TensorFlow", "HuggingFace",
-                  "Tablue", "Azure", "MongoDB", "MySQL",
-                  "Git", "GitHub","Azure DevOps", "Firebase", "GCP", "MCP Server","Agets",
+                  "Tableau", "Azure", "MongoDB", "MySQL",
+                  "Git", "GitHub","Azure DevOps", "Firebase", "GCP", "MCP Server","Agents",
                 ].map((skill, index) => (
                   <motion.span
                     key={skill}
